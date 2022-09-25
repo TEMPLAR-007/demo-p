@@ -1,0 +1,138 @@
+.slider {
+    max-width: 80%;
+    position: relative;
+    margin: auto;
+    height: 400px;
+}
+
+.slider .item img {
+    object-fit: cover;
+    width: 100%;
+    height: 500px;
+}
+
+.slider .previous,
+.slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 70%;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.slider .previous:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.slider .item {
+    animation: fade 5s infinite;
+}
+
+@keyframes fade {
+    from {
+        opacity: 1
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+
+.progress-container {
+    width: 600px;
+    margin: 100px auto;
+}
+
+.progressbar li {
+    list-style-type: none;
+    width: 25%;
+    float: left;
+    font-size: 12px;
+    position: relative;
+    text-align: center;
+    color: #7d7d7d;
+}
+
+.progressbar li:before {
+    width: 30px;
+    height: 30px;
+    content: "";
+    line-height: 30px;
+    border: 2px solid #7d7d7d;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.progressbar li.done:before {
+    content: "✓";
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.progressbar li:after {
+    width: 100%;
+    height: 2px;
+    content: '';
+    position: absolute;
+    background-color: #7d7d7d;
+    top: 15px;
+    left: -50%;
+    z-index: -1;
+}
+
+.progressbar li:first-child:after {
+    content: none;
+}
+
+.progressbar li.active {
+    color: green;
+}
+
+.progressbar li.active:before {
+    content: "✓";
+    color: #ffffff;
+    font-size: 20px;
+    border-color: #55b776;
+    background-color: #55b776;
+}
+
+.progressbar li.active+li:after {
+    background-color: #55b776;
+}
+
+.progressbar li.done:before {
+    border-color: #55b776;
+    background-color: #55b776;
+}
+
+.progressbar li.done+li:after {
+    background-color: #55b776;
+}
+
+.progressbar li.inactive:before {
+    border-color: #7d7d7d;
+    background-color: #7d7d7d;
+}
+
+.progressbar li.inactive+li:after {
+    background-color: #7d7d7d;
+}
+
+
+footer {
+    background-color: #081430;
+}
